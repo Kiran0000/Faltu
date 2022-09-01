@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Get the Home') {
       steps {
-        echo "${env.JENKINS_URL}"
+        aws sts get-caller-identity
       }
     }
   }
